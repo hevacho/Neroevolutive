@@ -37,8 +37,8 @@ public class EvolutionController : MonoBehaviour
             // Ordenar por puntuación
             jugadores.Sort((a, b) => b.lifeTime.CompareTo(a.lifeTime));
 
-            // Seleccionar mejores
-            int top = Mathf.Max(1, jugadores.Count / 10);
+            // Seleccionar 4 mejores
+            int top = 4;
             List<PlayerJump> elite = jugadores.GetRange(0, top);
 
             // Crear nueva generación
